@@ -8,8 +8,8 @@ ADD index.html /var/www/html
 RUN chgrp -R 0 /var/log/httpd /var/run/httpd && \
 chmod -R g=u /var/log/httpd /var/run/httpd
   
-EXPOSE 80
-USER root
+EXPOSE 8080
+USER 1001
 
 CMD usr/sbin/httpd -D FOREGROUND
 

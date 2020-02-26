@@ -5,7 +5,8 @@ RUN yum install -y --disableplugin=subscription-manager --nodocs httpd\
 
 ADD index.html /var/www/html
 
-RUN rm -rf /run/httpd && mkdir /run/httpd
+RUN chgrp -R 0 /var/log/httpd /var/run/httpd && \
+chmod -R g=u /var/log/httpd /var/run/httpd
   
 EXPOSE 80
 USER root

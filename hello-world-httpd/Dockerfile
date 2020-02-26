@@ -12,5 +12,5 @@ RUN touch /run/httpd.pid \
 EXPOSE 80
 USER root
 
-CMD httpd -c /etc/httpd/conf/httpd.conf
+CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”]
 

@@ -133,7 +133,7 @@ pipeline {
                 // TODO: Create a new app in staging and expose the service
 		sh '''
 		oc new-app -i ${APP_NAME}:stage --name ${APP_NAME}
-		oc expose svc/${APP_NAME}'
+		oc expose svc/${APP_NAME}
 
 		'''
 

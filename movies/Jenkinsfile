@@ -15,7 +15,7 @@ pipeline {
         DEV_PROJECT = "xxx"
         STAGE_PROJECT = "xxxx"
         APP_GIT_URL = "https://github.com/ilyxaxxx/DO288-apps"
-
+	NEXUS_SERVER = "https://repo1.maven.org/maven2"
         // DO NOT CHANGE THE GLOBAL VARS BELOW THIS LINE
         APP_NAME = "movies"
     }

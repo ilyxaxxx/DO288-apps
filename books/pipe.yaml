@@ -2,14 +2,14 @@
     "kind": "BuildConfig",
     "apiVersion": "build.openshift.io/v1",
     "metadata": {
-        "name": "custom-pipeline"
+        "name": "pipe2"
     },
     "spec": {
         "source": {
             "type": "Git",
             "git": {
-                "uri": "https://github.com/youruser/DO288-apps.git",
-                "ref": "custom-pipeline"
+                "uri": "https://github.com/ilyxaxxx/DO288-apps.git",
+                "ref": "simple-pipeline"
             },
             "contextDir": "books"
         },

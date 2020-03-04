@@ -6,15 +6,15 @@ pipeline {
     agent {
       node {
         //TODO: Add label for the Maven jenkins agent
+	label "maven"
       }
     }
 
     environment {
         //TODO: Customize these variables for your environment
-        DEV_PROJECT = "youruser-movies-dev"
-        STAGE_PROJECT = "youruser-movies-stage"
-        APP_GIT_URL = "https://github.com/youruser/DO288-apps"
-        NEXUS_SERVER = "http://nexus-common.apps.cluster.domain.example.com/repository/java"
+        DEV_PROJECT = "xxx"
+        STAGE_PROJECT = "xxxx"
+        APP_GIT_URL = "https://github.com/ilyxaxxx/DO288-apps"
 
         // DO NOT CHANGE THE GLOBAL VARS BELOW THIS LINE
         APP_NAME = "movies"
@@ -82,7 +82,11 @@ pipeline {
                     }
                 }
                 // TODO: Create a new OpenShift application based on the ${APP_NAME}:latest image stream
+		sh '''
+		oc new-app -i ${APP_NAME}:latest --name dev
+		'''
                 // TODO: Expose the ${APP_NAME} service for external access
+		sh 'expose svc/${APP_NAME}'
             }
         }
 

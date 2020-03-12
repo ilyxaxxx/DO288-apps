@@ -13,7 +13,7 @@ RUN   yum install -y --disableplugin=subscription-manager java-1.8.0-openjdk-hea
       mkdir -p /opt/app-root/bin
 
 # Copy the runnable fat JAR to the container.
-ADD   hello-java.jar /opt/app-root/bin/
+COPY   hello-java.jar /opt/app-root/bin/
 
 COPY  run-app.sh /opt/app-root/bin/
 

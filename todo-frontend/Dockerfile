@@ -14,7 +14,7 @@ COPY src/ /usr/share/nginx/html
 
 RUN touch /run/nginx.pid && \
 	chgrp -R 0 /usr/share/nginx/html /var/log/nginx /run/nginx.pid && \
-	chmod -R g+rwx /var/log/nginx /run/nginx.pid
+	chmod -R g=u /var/log/nginx /run/nginx.pid
   
 
 EXPOSE 8080

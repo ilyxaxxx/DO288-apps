@@ -15,11 +15,11 @@ COPY nginx.conf /etc/nginx/
 RUN touch /run/nginx.pid
 
 RUN chown -R 0 /var/log/nginx /run/nginx.pid \
-& chgrp -R root /var/log/nginx /run/nginx.pid \
+& chgrp -R root /var/log/nginx /usr/share/nginx /run/nginx.pid \
 & chmod -R g+rwx /var/log/nginx /run/nginx.pid
-  
+COPY nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 8080
+EXPOSE 8888
 
 USER 1001
 COPY src/ /usr/share/nginx/html

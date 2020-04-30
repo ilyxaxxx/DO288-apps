@@ -21,7 +21,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 8888
 
-USER 1001
+#USER 1001
 COPY src/ /usr/share/nginx/html
 
 CMD nginx -g "daemon off;"

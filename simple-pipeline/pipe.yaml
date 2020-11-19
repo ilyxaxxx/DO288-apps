@@ -9,9 +9,9 @@
             "type": "Git",
             "git": {
                 "uri": "https://github.com/ilyxaxxx/DO288-apps.git", 
-                "ref": "custom-pipeline"
+                "ref": "t1"
             },
-            "contextDir": "books"
+            "contextDir": "simple-pipeline""
         },
         "strategy": {
             "type": "JenkinsPipeline",
